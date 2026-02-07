@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dias Carneiro - Contatos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0a2540 0%, #1a4d6d 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ==================== LOGO NO TOPO ==================== */
+        /* PARA ALTERAR A LOGO: substitua o src da imagem abaixo */
+        .logo-container {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+        }
+
+        .logo {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+        }
+
+        /* ==================== ITENS DE CONTATO ==================== */
+        /* PARA ADICIONAR NOVO ITEM: copie todo o bloco .contact-item no HTML */
+        .contact-item {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ==================== ÍCONES ==================== */
+        /* PARA MUDAR COR DOS ÍCONES: altere o 'color' abaixo */
+        .icon {
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0a2540;
+            color: white;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* ==================== TEXTO DOS CONTATOS ==================== */
+        /* PARA MUDAR ESTILO DO TEXTO: altere aqui */
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 3px;
+        }
+
+        .contact-value {
+            font-size: 16px;
+            color: #0a2540;
+            font-weight: 500;
+        }
+
+        /* Link especial para URLs */
+        .contact-value a {
+            color: #0a2540;
+            text-decoration: none;
+        }
+
+        .contact-value a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .logo {
+                max-width: 250px;
+            }
+
+            .contact-item {
+                padding: 15px 20px;
+            }
+
+            .icon {
+                font-size: 20px;
+                width: 35px;
+                height: 35px;
+            }
+
+            .contact-value {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- ==================== LOGO NO TOPO ==================== -->
+        <!-- PARA TROCAR A LOGO: altere o 'src' da imagem abaixo -->
+        <div class="logo-container">
+            <img src="https://via.placeholder.com/300x120/0a2540/ffffff?text=Dias+Carneiro" 
+                 alt="Dias Carneiro Logo" 
+                 class="logo">
+        </div>
+
+        <!-- ==================== LISTA DE CONTATOS ==================== -->
+        <!-- PARA ADICIONAR NOVO CONTATO: copie um bloco completo de 'contact-item' -->
+        <!-- e cole abaixo, depois altere os textos e ícone -->
+
+        <!-- Instagram -->
+        <div class="contact-item" onclick="openLink('https://instagram.com/diascarneiro')">
+            <div class="icon">📷</div>
+            <div class="contact-info">
+                <div class="contact-label">Instagram</div>
+                <div class="contact-value">@diascarneiro</div>
+            </div>
+        </div>
+
+        <!-- Facebook -->
+        <div class="contact-item" onclick="openLink('https://facebook.com/diascarneiro')">
+            <div class="icon">👥</div>
+            <div class="contact-info">
+                <div class="contact-label">Facebook</div>
+                <div class="contact-value">/diascarneiro</div>
+            </div>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="contact-item" onclick="openLink('https://wa.me/5548998672111')">
+            <div class="icon">💬</div>
+            <div class="contact-info">
+                <div class="contact-label">WhatsApp</div>
+                <div class="contact-value">48 9 9867 2111</div>
+            </div>
+        </div>
+
+        <!-- Website -->
+        <div class="contact-item" onclick="openLink('https://www.diascarneiro.com')">
+            <div class="icon">🌐</div>
+            <div class="contact-info">
+                <div class="contact-label">Website</div>
+                <div class="contact-value">www.diascarneiro.com</div>
+            </div>
+        </div>
+
+        <!-- Endereço -->
+        <div class="contact-item" onclick="openLink('https://maps.google.com/?q=SC+Palhoça+Pagani')">
+            <div class="icon">📍</div>
+            <div class="contact-info">
+                <div class="contact-label">Endereço</div>
+                <div class="contact-value">SC - Palhoça, Pagani</div>
+            </div>
+        </div>
+
+        <!-- ==================== PARA ADICIONAR MAIS CONTATOS ==================== -->
+        <!-- Cole este template abaixo e altere os dados:
+
+        <div class="contact-item" onclick="openLink('SEU_LINK_AQUI')">
+            <div class="icon">EMOJI_AQUI</div>
+            <div class="contact-info">
+                <div class="contact-label">TIPO DE CONTATO</div>
+                <div class="contact-value">VALOR DO CONTATO</div>
+            </div>
+        </div>
+
+        -->
+
+    </div>
+
+    <script>
+        // ==================== FUNÇÃO PARA ABRIR LINKS ==================== 
+        // NÃO PRECISA MEXER AQUI, a menos que queira mudar o comportamento
+        function openLink(url) {
+            window.open(url, '_blank');
+        }
+
+        // ==================== ADICIONE MAIS FUNÇÕES AQUI SE NECESSÁRIO ====================
+        // Exemplo: função para copiar texto, etc.
+        
+    </script>
+</body>
+</html>
